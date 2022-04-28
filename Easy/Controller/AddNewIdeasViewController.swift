@@ -67,11 +67,15 @@ class AddNewIdeasViewController: UIViewController {
         }
         
         saveItems()
-//        isDismissed?()
+        isDismissed?()
         self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        if let newIdea = newIdea {
+            newIdea.idea = textField.text != "" ? textField.text : "Untitled Idea"
+            ideas.append(newIdea)
+        }
         isDismissed?()
     }
     func loadItems() {

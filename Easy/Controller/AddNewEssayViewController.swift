@@ -187,7 +187,7 @@ extension AddNewEssayViewController: UITableViewDelegate{
         // Trash action
         if(tableView == ideasTableView){
             let trash = UIContextualAction(style: .destructive,
-                title: "Trash") { [weak self] (action, view, completionHandler) in
+                title: "Delete") { [weak self] (action, view, completionHandler) in
                 
                 self!.context.delete((self?.ideas[indexPath.row])!)
                 self?.ideas.remove(at: indexPath.row)
@@ -211,7 +211,20 @@ extension AddNewEssayViewController: UITableViewDataSource{
         if(tableView == purposeTableView){
             return reasonManager.listReason.count
         } else if tableView == ideasTableView{
-            print(ideas.count)
+            if(ideas.count <= 0){
+                let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.ideasTableView.bounds.size.width, height: self.ideasTableView.bounds.size.height))
+                           noDataLabel.text = "No Ideas available 👀"
+                noDataLabel.textColor = UIColor.black
+                noDataLabel.textAlignment = .center
+                ideasTableView.backgroundView = noDataLabel
+            } else {
+                let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.ideasTableView.bounds.size.width, height: self.ideasTableView.bounds.size.height))
+                           noDataLabel.text = ""
+                noDataLabel.textColor = UIColor.black
+                noDataLabel.textAlignment = .center
+                ideasTableView.backgroundView = noDataLabel
+            }
+//            return essays.count
             return ideas.count
         }
         return 0

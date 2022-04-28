@@ -115,7 +115,7 @@ extension MainPageController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         // Trash action
         let trash = UIContextualAction(style: .destructive,
-            title: "Trash") { [weak self] (action, view, completionHandler) in
+            title: "Delete") { [weak self] (action, view, completionHandler) in
             
             self!.context.delete((self?.essays[indexPath.row])!)
             self?.essays.remove(at: indexPath.row)
@@ -146,7 +146,7 @@ extension MainPageController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(essays.count <= 0){
             var noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
-                       noDataLabel.text = "No Data Available"
+                       noDataLabel.text = "No essay available 🥲"
             noDataLabel.textColor = UIColor.black
             noDataLabel.textAlignment = .center
             tableView.backgroundView = noDataLabel

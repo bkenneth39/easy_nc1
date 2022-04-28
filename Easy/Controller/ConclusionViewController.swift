@@ -106,6 +106,19 @@ class ConclusionViewController: UIViewController {
 
 extension ConclusionViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(ideas.count <= 0){
+            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.ideasTableView.bounds.size.width, height: self.ideasTableView.bounds.size.height))
+                       noDataLabel.text = "No Ideas have been added 🤔"
+            noDataLabel.textColor = UIColor.black
+            noDataLabel.textAlignment = .center
+            ideasTableView.backgroundView = noDataLabel
+        } else {
+            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.ideasTableView.bounds.size.width, height: self.ideasTableView.bounds.size.height))
+                       noDataLabel.text = ""
+            noDataLabel.textColor = UIColor.black
+            noDataLabel.textAlignment = .center
+            ideasTableView.backgroundView = noDataLabel
+        }
         return ideas.count
     }
     
