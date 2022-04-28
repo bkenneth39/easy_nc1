@@ -26,6 +26,12 @@ class AddNewIdeasViewController: UIViewController {
         textField.layer.masksToBounds = true
         textField.layer.borderColor = Helper.orangeColor.cgColor
         textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 10
+        linkTextField.layer.masksToBounds = true
+        linkTextField.layer.borderColor = Helper.orangeColor.cgColor
+        linkTextField.layer.borderWidth = 1.0
+        linkTextField.layer.cornerRadius = 10
+        
         newIdea = Ideas(context: context)
         if let parentId = parentId {
             print(parentId)

@@ -25,6 +25,14 @@ class EditIdeaViewController: UIViewController,SFSafariViewControllerDelegate {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = Helper.orangeColor
         navigationController?.navigationBar.prefersLargeTitles = false
+        titleTextField.layer.masksToBounds = true
+        titleTextField.layer.borderColor = Helper.orangeColor.cgColor
+        titleTextField.layer.borderWidth = 1.0
+        titleTextField.layer.cornerRadius = 10
+        urlTextField.layer.masksToBounds = true
+        urlTextField.layer.borderColor = Helper.orangeColor.cgColor
+        urlTextField.layer.borderWidth = 1.0
+        urlTextField.layer.cornerRadius = 10
 //        loadIdeas()
         if let ideasId = ideasId {
             do{
