@@ -206,6 +206,8 @@ extension DetailViewController: UITableViewDelegate{
         ideasTableView.layer.cornerRadius = 10
         if(tableView == purposeTableView){
             cell.accessoryType = indexPath.row == currentEssay!.reason ? .checkmark : .none
+        }else if(tableView == ideasTableView){
+            cell.accessoryType = .disclosureIndicator
         }
         
     }

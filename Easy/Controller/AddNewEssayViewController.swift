@@ -181,6 +181,9 @@ extension AddNewEssayViewController: UITableViewDelegate{
         ideasTableView.layer.borderColor = Helper.orangeColor.cgColor
         ideasTableView.layer.borderWidth = 1
         ideasTableView.layer.cornerRadius = 10
+        if(tableView == ideasTableView){
+            cell.accessoryType = .disclosureIndicator
+        }
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
