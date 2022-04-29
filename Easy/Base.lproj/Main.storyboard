@@ -378,7 +378,7 @@
                             <constraint firstItem="fu9-Bl-QxF" firstAttribute="leading" secondItem="Wdn-uu-hgd" secondAttribute="leading" constant="16" id="ys1-Bc-S3s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Brainstorm Your Idea" id="egr-Hx-Yl9"/>
+                    <navigationItem key="navigationItem" title="Brainstorm Your Idea" largeTitleDisplayMode="never" id="egr-Hx-Yl9"/>
                     <connections>
                         <outlet property="linkTextField" destination="h0Y-10-k0E" id="Ft2-hn-RRs"/>
                         <outlet property="textField" destination="fu9-Bl-QxF" id="GzT-N9-sOX"/>
@@ -490,7 +490,7 @@
                             <constraint firstItem="zVC-MF-Wbq" firstAttribute="trailing" secondItem="8nV-fn-Lci" secondAttribute="trailing" constant="16" id="yTs-kC-dNz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit your Ideas!" id="oHO-bC-zF2">
+                    <navigationItem key="navigationItem" title="Edit your Ideas!" largeTitleDisplayMode="never" id="oHO-bC-zF2">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="trash.fill" catalog="system" id="Mpd-hw-Blm">
                             <color key="tintColor" red="0.67843137249999996" green="0.41568627450000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -515,14 +515,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's list of your ideas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j35-uZ-FAa">
-                                <rect key="frame" x="16" y="103" width="382" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's list of your ideas 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j35-uZ-FAa">
+                                <rect key="frame" x="16" y="103" width="382" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CB3-9k-2mG">
-                                <rect key="frame" x="16" y="139" width="382" height="200"/>
+                                <rect key="frame" x="16" y="140" width="382" height="200"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.96078431369999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="jVS-yc-27B"/>
@@ -539,13 +539,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write outline / draft for Introduction part of your essay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2C-W7-5lz">
-                                <rect key="frame" x="16" y="364" width="382" height="41"/>
+                                <rect key="frame" x="16" y="365" width="382" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gxd-Ok-vFA">
-                                <rect key="frame" x="16" y="430" width="382" height="327"/>
+                                <rect key="frame" x="16" y="431" width="382" height="326"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.96078431369999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -590,7 +590,7 @@
                             <constraint firstItem="CB3-9k-2mG" firstAttribute="leading" secondItem="3e6-cf-b8f" secondAttribute="leading" constant="16" id="yTg-Uv-phO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Introduction" id="XNt-Gd-8eB"/>
+                    <navigationItem key="navigationItem" title="Introduction" largeTitleDisplayMode="never" id="XNt-Gd-8eB"/>
                     <connections>
                         <outlet property="ideasTableView" destination="CB3-9k-2mG" id="O4f-c5-Bqn"/>
                         <outlet property="introductionTableView" destination="CB3-9k-2mG" id="DmR-8v-Sgf"/>
@@ -847,14 +847,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's list of your ideas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K28-JJ-3TR">
-                                <rect key="frame" x="16" y="103" width="382" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's list of your ideas 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K28-JJ-3TR">
+                                <rect key="frame" x="16" y="103" width="382" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-Jo-egJ">
-                                <rect key="frame" x="16" y="139" width="382" height="200"/>
+                                <rect key="frame" x="16" y="140" width="382" height="200"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.96078431369999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="xi7-1i-fqC"/>
@@ -871,13 +871,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write outline / draft for body part of your essay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-kM-fgT">
-                                <rect key="frame" x="16" y="364" width="374" height="41"/>
+                                <rect key="frame" x="16" y="365" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xQ3-Bg-8iH">
-                                <rect key="frame" x="16" y="430" width="382" height="327"/>
+                                <rect key="frame" x="16" y="431" width="382" height="326"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.96078431369999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -923,7 +923,7 @@
                             <constraint firstItem="lI5-yp-23n" firstAttribute="trailing" secondItem="K28-JJ-3TR" secondAttribute="trailing" constant="16" id="yLb-Ql-aqz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Body / Content" id="oqo-l9-IrR"/>
+                    <navigationItem key="navigationItem" title="Body / Content" largeTitleDisplayMode="never" id="oqo-l9-IrR"/>
                     <connections>
                         <outlet property="bodyTextView" destination="xQ3-Bg-8iH" id="L9M-6Z-hmm"/>
                         <outlet property="ideasTableView" destination="aHA-Jo-egJ" id="xEm-ah-P6r"/>
@@ -942,14 +942,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's list of your ideas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd5-Yf-mwV">
-                                <rect key="frame" x="16" y="103" width="382" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's list of your ideas 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd5-Yf-mwV">
+                                <rect key="frame" x="16" y="103" width="382" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kh8-NB-ka1">
-                                <rect key="frame" x="16" y="139" width="382" height="200"/>
+                                <rect key="frame" x="16" y="140" width="382" height="200"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.96078431369999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="oXT-Vn-NIz"/>
@@ -966,13 +966,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write outline / draft for conclusion part of your essay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkK-ez-jPy">
-                                <rect key="frame" x="16" y="364" width="374" height="41"/>
+                                <rect key="frame" x="16" y="365" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q9S-lK-tEy">
-                                <rect key="frame" x="16" y="430" width="382" height="327"/>
+                                <rect key="frame" x="16" y="431" width="382" height="326"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.96078431369999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1019,7 +1019,7 @@
                             <constraint firstItem="q9S-lK-tEy" firstAttribute="top" secondItem="BkK-ez-jPy" secondAttribute="bottom" constant="25" id="xiH-Rx-mEE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Conclusion" id="WCq-T2-FVu"/>
+                    <navigationItem key="navigationItem" title="Conclusion" largeTitleDisplayMode="never" id="WCq-T2-FVu"/>
                     <connections>
                         <outlet property="conclusionTextView" destination="q9S-lK-tEy" id="sUq-aI-FSM"/>
                         <outlet property="ideasTableView" destination="Kh8-NB-ka1" id="U6l-5j-TKw"/>
@@ -1032,11 +1032,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6lf-KF-Tdm"/>
-        <segue reference="TuF-sh-wkg"/>
-        <segue reference="1ne-Ft-Dt9"/>
-        <segue reference="KyU-mn-Jc8"/>
-        <segue reference="Of0-RB-jeD"/>
+        <segue reference="rVA-g3-fNU"/>
+        <segue reference="php-no-ySc"/>
+        <segue reference="6Vq-BD-VOg"/>
+        <segue reference="qxd-jf-VG9"/>
+        <segue reference="PTs-Wj-jg6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

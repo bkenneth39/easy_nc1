@@ -127,6 +127,10 @@ extension MainPageController: UITableViewDelegate{
         let configuration = UISwipeActionsConfiguration(actions: [trash])
         return configuration
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.accessoryType = .disclosureIndicator
+    }
 }
 
 extension MainPageController: UITableViewDataSource{

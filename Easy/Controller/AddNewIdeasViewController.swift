@@ -32,6 +32,8 @@ class AddNewIdeasViewController: UIViewController {
         linkTextField.layer.borderWidth = 1.0
         linkTextField.layer.cornerRadius = 10
         
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
         newIdea = Ideas(context: context)
         if let parentId = parentId {
             print(parentId)
