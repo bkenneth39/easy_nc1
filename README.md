@@ -1,4 +1,4 @@
-# easy: easy essay
+# easy (easy essay)
 
 Created by Bryan Kenneth for Nano Challenge 1 Apple Developer Academy@BINUS
 
