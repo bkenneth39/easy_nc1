@@ -1,3 +1,4 @@
+![](https://github.com/bkenneth39/easy_nc1/blob/main/banner_github.png) 
 # easy (easy essay)
 
 Created by Bryan Kenneth for Nano Challenge 1 Apple Developer Academy@BINUS
