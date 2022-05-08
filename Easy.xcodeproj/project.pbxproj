@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2A58AD282549320074AC8C /* IntoFAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58AC282549320074AC8C /* IntoFAQViewController.swift */; };
+		AC2A58AF282552130074AC8C /* IntroFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58AE282552130074AC8C /* IntroFAQ.swift */; };
+		AC2A58B1282552800074AC8C /* IntroFAQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58B0282552800074AC8C /* IntroFAQManager.swift */; };
+		AC2A58B32825ADD10074AC8C /* BodyFAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58B22825ADD10074AC8C /* BodyFAQViewController.swift */; };
+		AC2A58B52825AE560074AC8C /* BodyFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58B42825AE560074AC8C /* BodyFAQ.swift */; };
+		AC2A58B72825AF0D0074AC8C /* BodyFAQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58B62825AF0D0074AC8C /* BodyFAQManager.swift */; };
+		AC2A58B92826B3370074AC8C /* ConclusionFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58B82826B3370074AC8C /* ConclusionFAQ.swift */; };
+		AC2A58BB2826B35F0074AC8C /* ConclusionFAQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58BA2826B35F0074AC8C /* ConclusionFAQManager.swift */; };
+		AC2A58BD2826B3C90074AC8C /* ConclusionFAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A58BC2826B3C90074AC8C /* ConclusionFAQViewController.swift */; };
 		ACC3AACD2818FABC00663004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3AACC2818FABC00663004 /* AppDelegate.swift */; };
 		ACC3AACF2818FABC00663004 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3AACE2818FABC00663004 /* SceneDelegate.swift */; };
 		ACC3AAD12818FABC00663004 /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC3AAD02818FABC00663004 /* MainPageController.swift */; };
@@ -26,6 +35,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC2A58AC282549320074AC8C /* IntoFAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoFAQViewController.swift; sourceTree = "<group>"; };
+		AC2A58AE282552130074AC8C /* IntroFAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFAQ.swift; sourceTree = "<group>"; };
+		AC2A58B0282552800074AC8C /* IntroFAQManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFAQManager.swift; sourceTree = "<group>"; };
+		AC2A58B22825ADD10074AC8C /* BodyFAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFAQViewController.swift; sourceTree = "<group>"; };
+		AC2A58B42825AE560074AC8C /* BodyFAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFAQ.swift; sourceTree = "<group>"; };
+		AC2A58B62825AF0D0074AC8C /* BodyFAQManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFAQManager.swift; sourceTree = "<group>"; };
+		AC2A58B82826B3370074AC8C /* ConclusionFAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionFAQ.swift; sourceTree = "<group>"; };
+		AC2A58BA2826B35F0074AC8C /* ConclusionFAQManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionFAQManager.swift; sourceTree = "<group>"; };
+		AC2A58BC2826B3C90074AC8C /* ConclusionFAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionFAQViewController.swift; sourceTree = "<group>"; };
 		ACC3AAC92818FABC00663004 /* Easy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC3AACC2818FABC00663004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC3AACE2818FABC00663004 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +119,9 @@
 				ACC3AAEE2819AA3D00663004 /* IntroductionViewController.swift */,
 				ACC3AAF02819AFDC00663004 /* BodyViewController.swift */,
 				ACC3AAF22819B0C700663004 /* ConclusionViewController.swift */,
+				AC2A58AC282549320074AC8C /* IntoFAQViewController.swift */,
+				AC2A58B22825ADD10074AC8C /* BodyFAQViewController.swift */,
+				AC2A58BC2826B3C90074AC8C /* ConclusionFAQViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,6 +130,12 @@
 			isa = PBXGroup;
 			children = (
 				ACC3AAF52819B1E800663004 /* ReasonManager.swift */,
+				AC2A58AE282552130074AC8C /* IntroFAQ.swift */,
+				AC2A58B0282552800074AC8C /* IntroFAQManager.swift */,
+				AC2A58B42825AE560074AC8C /* BodyFAQ.swift */,
+				AC2A58B62825AF0D0074AC8C /* BodyFAQManager.swift */,
+				AC2A58B82826B3370074AC8C /* ConclusionFAQ.swift */,
+				AC2A58BA2826B35F0074AC8C /* ConclusionFAQManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2A58BD2826B3C90074AC8C /* ConclusionFAQViewController.swift in Sources */,
 				ACC3AAD12818FABC00663004 /* MainPageController.swift in Sources */,
 				ACC3AAF62819B1E800663004 /* ReasonManager.swift in Sources */,
+				AC2A58BB2826B35F0074AC8C /* ConclusionFAQManager.swift in Sources */,
 				ACC3AACD2818FABC00663004 /* AppDelegate.swift in Sources */,
 				ACC3AAE928198BA000663004 /* AddNewIdeasViewController.swift in Sources */,
 				ACC3AAE5281922B900663004 /* DetailViewController.swift in Sources */,
@@ -193,10 +222,17 @@
 				ACC3AAF32819B0C700663004 /* ConclusionViewController.swift in Sources */,
 				ACC3AAD72818FABC00663004 /* Easy.xcdatamodeld in Sources */,
 				ACC3AAEF2819AA3D00663004 /* IntroductionViewController.swift in Sources */,
+				AC2A58AD282549320074AC8C /* IntoFAQViewController.swift in Sources */,
 				ACC3AAF12819AFDC00663004 /* BodyViewController.swift in Sources */,
+				AC2A58B92826B3370074AC8C /* ConclusionFAQ.swift in Sources */,
+				AC2A58B72825AF0D0074AC8C /* BodyFAQManager.swift in Sources */,
 				ACC3AAE728192D6300663004 /* Helper.swift in Sources */,
 				ACC3AAED2819A6F300663004 /* AddNewEssayViewController.swift in Sources */,
 				ACC3AAEB2819A22200663004 /* EditIdeaViewController.swift in Sources */,
+				AC2A58B32825ADD10074AC8C /* BodyFAQViewController.swift in Sources */,
+				AC2A58AF282552130074AC8C /* IntroFAQ.swift in Sources */,
+				AC2A58B52825AE560074AC8C /* BodyFAQ.swift in Sources */,
+				AC2A58B1282552800074AC8C /* IntroFAQManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

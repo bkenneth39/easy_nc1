@@ -102,6 +102,9 @@ class ConclusionViewController: UIViewController {
         ideasTableView.reloadData()
     }
     
+    @IBAction func infoBtnPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goToConclusionFAQ", sender: self)
+    }
 }
 
 extension ConclusionViewController: UITableViewDataSource{

@@ -15,7 +15,9 @@ class IntroductionViewController: UIViewController {
     var essays = [Essay]()
     var ideas = [Ideas]()
     var isDismissed: (() -> Void)?
+    @IBOutlet weak var thesisTextField: UITextField!
     
+    @IBOutlet weak var hooksTextField: UITextField!
     
     @IBOutlet weak var introductionTextView: UITextView!
     @IBOutlet weak var ideasTableView: UITableView!
@@ -27,9 +29,17 @@ class IntroductionViewController: UIViewController {
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 10
         
+        hooksTextField.layer.borderColor = Helper.orangeColor.cgColor
+        hooksTextField.layer.borderWidth = 1
+        hooksTextField.layer.cornerRadius = 10
+        
+        thesisTextField.layer.borderColor = Helper.orangeColor.cgColor
+        thesisTextField.layer.borderWidth = 1
+        thesisTextField.layer.cornerRadius = 10
+        
         ideasTableView.dataSource = self
         ideasTableView.delegate = self
-        
+        ideasTableView.separatorColor = .clear
         ideasTableView.layer.borderColor = Helper.orangeColor.cgColor
         ideasTableView.layer.borderWidth = 1
         ideasTableView.layer.cornerRadius = 10
@@ -42,6 +52,12 @@ class IntroductionViewController: UIViewController {
                 if(essay?.introduction != "" && essay?.introduction != nil){
                     introductionTextView.text = essay?.introduction
                 }
+                if(essay?.thesis != "" && essay?.thesis != nil){
+                    thesisTextField.text = essay?.thesis
+                }
+                if(essay?.hook != "" && essay?.hook != nil){
+                    hooksTextField.text = essay?.hook
+                }
             }catch{
                 print(error)
             }
@@ -49,8 +65,15 @@ class IntroductionViewController: UIViewController {
             loadItems()
             loadIdeas()
             essay = essays.last
+            
             if(essay?.introduction != "" && essay?.introduction != nil){
                 introductionTextView.text = essay?.introduction
+            }
+            if(essay?.thesis != "" && essay?.thesis != nil){
+                thesisTextField.text = essay?.thesis
+            }
+            if(essay?.hook != "" && essay?.hook != nil){
+                hooksTextField.text = essay?.hook
             }
             print(essay)
         }
@@ -61,6 +84,8 @@ class IntroductionViewController: UIViewController {
     }
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         essay?.introduction = introductionTextView.text
+        essay?.thesis = thesisTextField.text
+        essay?.hook = hooksTextField.text
         saveItems()
         isDismissed?()
         navigationController?.popViewController(animated: true)
@@ -105,6 +130,9 @@ class IntroductionViewController: UIViewController {
         ideasTableView.reloadData()
     }
 
+    @IBAction func infoBtnPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goToIntroFAQ", sender: self)
+    }
 }
 
 extension IntroductionViewController: UITableViewDelegate{

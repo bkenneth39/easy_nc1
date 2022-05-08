@@ -106,6 +106,9 @@ class BodyViewController: UIViewController {
         ideasTableView.reloadData()
     }
     
+    @IBAction func infoBtnPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goToBodyFAQ", sender: self)
+    }
 }
 
 extension BodyViewController: UITableViewDelegate{
