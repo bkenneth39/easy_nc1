@@ -6,7 +6,7 @@
         <attribute name="conclusion" optional="YES" attributeType="String"/>
         <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="hook" optional="YES" attributeType="String"/>
-        <attribute name="introduction" optional="YES" attributeType="String"/>
+        <attribute name="introduction" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="reason" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="thesis" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>

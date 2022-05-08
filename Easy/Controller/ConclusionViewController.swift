@@ -15,12 +15,15 @@ class ConclusionViewController: UIViewController {
     var essays = [Essay]()
     var ideas = [Ideas]()
     var isDismissed: (() -> Void)?
+   
 
     @IBOutlet weak var ideasTableView: UITableView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var conclusionTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
         textView.layer.borderColor = Helper.orangeColor.cgColor
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 10
@@ -29,8 +32,25 @@ class ConclusionViewController: UIViewController {
         ideasTableView.layer.borderWidth = 1
         ideasTableView.layer.cornerRadius = 10
         
+        ideasTableView.separatorColor = .clear
+        
         ideasTableView.dataSource = self
         
+        let button = UIButton(type: .system)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 17, weight: .bold, scale: .large)
+
+        let largeBoldDoc = UIImage(systemName: "chevron.left", withConfiguration: largeConfig)
+        
+        button.setImage(largeBoldDoc, for: .normal)
+           button.setTitle("Back", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+        button.sizeToFit()
+        button.imageView?.tintColor = Helper.orangeColor
+        
+        self.navigationItem.leftBarButtonItem =  UIBarButtonItem(customView: button)
+        
+        button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+      
         if let parentId = parentId {
             print(parentId)
             do{
@@ -52,11 +72,39 @@ class ConclusionViewController: UIViewController {
             print(essay)
         }
     }
+    
+    @objc func backAction(sender: UIBarButtonItem) {
+        if(essay?.conclusion != conclusionTextView.text){
+            let refreshAlert = UIAlertController(title: "Changes not saved", message: "Would you like to save changes you made?", preferredStyle: UIAlertController.Style.alert)
+
+            refreshAlert.addAction(UIAlertAction(title: "Yes", style: .cancel, handler: { (action: UIAlertAction!) in
+                self.essay?.conclusion = self.conclusionTextView.text
+                self.saveItems()
+                self.isDismissed?()
+                self.navigationController?.popViewController(animated: true)
+            }))
+
+            refreshAlert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action: UIAlertAction!) in
+                self.isDismissed?()
+                self.navigationController?.popViewController(animated: true)
+            }))
+
+            present(refreshAlert, animated: true, completion: nil)
+        } else {
+            self.isDismissed?()
+            navigationController?.popViewController(animated: true)
+        }
+        
+       
+    }
+   
     override func viewWillDisappear(_ animated: Bool) {
+        
         isDismissed?()
     }
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
+       
         essay?.conclusion = conclusionTextView.text
         saveItems()
         isDismissed?()

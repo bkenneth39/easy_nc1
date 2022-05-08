@@ -1156,6 +1156,7 @@
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="bodyTextView" destination="xQ3-Bg-8iH" id="L9M-6Z-hmm"/>
+                        <outlet property="draftTextView" destination="Omd-qf-oAz" id="obt-fw-N0E"/>
                         <outlet property="ideasTableView" destination="aHA-Jo-egJ" id="xEm-ah-P6r"/>
                         <outlet property="textView" destination="xQ3-Bg-8iH" id="fA3-el-83D"/>
                         <segue destination="gE6-jZ-EYN" kind="show" identifier="goToBodyFAQ" id="Jnj-Fq-Zpj"/>

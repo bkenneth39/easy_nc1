@@ -44,6 +44,21 @@ class IntroductionViewController: UIViewController {
         ideasTableView.layer.borderWidth = 1
         ideasTableView.layer.cornerRadius = 10
         
+        let button = UIButton(type: .system)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 17, weight: .bold, scale: .large)
+
+        let largeBoldDoc = UIImage(systemName: "chevron.left", withConfiguration: largeConfig)
+        
+        button.setImage(largeBoldDoc, for: .normal)
+           button.setTitle("Back", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+        button.sizeToFit()
+        button.imageView?.tintColor = Helper.orangeColor
+        
+        self.navigationItem.leftBarButtonItem =  UIBarButtonItem(customView: button)
+        
+        button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+        
         if let parentId = parentId {
             print(parentId)
             do{
@@ -81,6 +96,33 @@ class IntroductionViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         isDismissed?()
+    }
+    
+    @objc func backAction(sender: UIBarButtonItem) {
+        if(essay?.introduction != introductionTextView.text || essay?.thesis != thesisTextField.text || essay?.hook != hooksTextField.text){
+            let refreshAlert = UIAlertController(title: "Changes not saved", message: "Would you like to save changes you made?", preferredStyle: UIAlertController.Style.alert)
+
+            refreshAlert.addAction(UIAlertAction(title: "Yes", style: .cancel, handler: { (action: UIAlertAction!) in
+                self.essay?.introduction = self.introductionTextView.text
+                self.essay?.thesis = self.thesisTextField.text
+                self.essay?.hook = self.hooksTextField.text
+                self.saveItems()
+                self.isDismissed?()
+                self.navigationController?.popViewController(animated: true)
+            }))
+
+            refreshAlert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action: UIAlertAction!) in
+                self.isDismissed?()
+                self.navigationController?.popViewController(animated: true)
+            }))
+
+            present(refreshAlert, animated: true, completion: nil)
+        } else {
+            self.isDismissed?()
+            navigationController?.popViewController(animated: true)
+        }
+        
+       
     }
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         essay?.introduction = introductionTextView.text
