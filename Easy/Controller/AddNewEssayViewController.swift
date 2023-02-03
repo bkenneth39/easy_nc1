@@ -183,6 +183,10 @@ extension AddNewEssayViewController: UITableViewDelegate{
         ideasTableView.layer.cornerRadius = 10
         if(tableView == ideasTableView){
             cell.accessoryType = .disclosureIndicator
+            cell.tintColor = Helper.orangeColor
+        } else if tableView == purposeTableView {
+            cell.accessoryType = indexPath.row == newEssay!.reason ? .checkmark : .none
+            cell.tintColor = Helper.orangeColor
         }
     }
     

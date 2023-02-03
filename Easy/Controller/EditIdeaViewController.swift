@@ -59,7 +59,12 @@ class EditIdeaViewController: UIViewController,SFSafariViewControllerDelegate {
     }
     
     @IBAction func openLinkBtnPressed(_ sender: UIButton) {
-        if let url = URL(string: object?.urllink ?? "https://google.com") {
+        var link = object?.urllink ?? "https://google.com"
+        if link.lowercased().hasPrefix("http://")==false{
+            link = "http://\(link)"
+        }
+        if let url = URL(string: link) {
+            
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
             vc.delegate = self
 
